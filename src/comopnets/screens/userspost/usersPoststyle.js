@@ -72,6 +72,11 @@ const userspoststyle = StyleSheet.create({
     userlikestext:{
         fontFamily:'Roboto-BoldItalic',
         fontSize:16,
+    },
+    likesviews:{
+        flexDirection:"row",
+        alignItems:"center",
+        gap:30
     }
 })
 

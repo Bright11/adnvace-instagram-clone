@@ -7,7 +7,6 @@ import UsersStatus from './status/UsersStatus';
 import UsersPost from '../userspost/UsersPost';
 
 const Home = ({navigation}) => {
-
   useLayoutEffect(()=>{
     navigation.setOptions({
       title:"",

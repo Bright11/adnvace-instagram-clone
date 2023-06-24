@@ -4,9 +4,12 @@ import Home from '../home/Home';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import homestyle from '../home/homestyle';
-import Upload from '../upload/Upload';
+import PostImages from '../upload/PostImages';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Search from '../search/Search';
+import { NavigationContainer } from '@react-navigation/native';
+import Mydrawer from '../drawer/Mydrawer';
+import Comment from '../comment/Mycomment';
 
 const Tab = createMaterialBottomTabNavigator();
 const MainScreen = ({navigation}) => {
@@ -43,15 +46,16 @@ const MainScreen = ({navigation}) => {
     })
   },[navigation]);
   return (
-    <Tab.Navigator
+      <Tab.Navigator
     activeColor="black"
     inactiveColor="#3e2465"
     // shifting={false}
     barStyle={{ backgroundColor:"white",paddingBottom: 5 }}
-   
+    // initialRouteName="home"
     >
     <Tab.Screen name="home" component={Home}
     options={{ 
+     
       tabBarLabel:"Home",
       tabBarIcon:({color})=>(
         <MaterialCommunityIcons name="home" color="black" size={26} />
@@ -59,7 +63,12 @@ const MainScreen = ({navigation}) => {
      }}
     
     />
-    <Tab.Screen name="add" component={Upload} 
+    {/* <Tab.Screen name='comment' component={Comment}
+     options={{
+      tabBarOptions: { showLabel: false,labeled:false },
+    }}
+    /> */}
+    <Tab.Screen name="add" component={PostImages} 
     options={{ 
       tabBarIcon:({color})=>(
         <MaterialCommunityIcons name="plus-circle-outline" color="black" size={26} />
@@ -73,10 +82,21 @@ const MainScreen = ({navigation}) => {
         <MaterialCommunityIcons name="magnify" color="black" size={26} />
       )
      }}
+    
+    />
+    <Tab.Screen name="drawer" component={Mydrawer} 
+    options={{ 
+      
+      tabBarIcon:({color})=>(
+        <AntDesign name="setting" color="black" size={26} />
+      )
+     }}
+    
     />
    
     {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
   </Tab.Navigator>
+    
   )
 }
 

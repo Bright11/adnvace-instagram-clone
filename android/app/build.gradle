@@ -146,6 +146,12 @@ android {
 
         }
     }
+    // here
+
+ defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+    // the end
 }
 
 dependencies {
