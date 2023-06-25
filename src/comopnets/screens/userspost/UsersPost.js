@@ -24,9 +24,9 @@ const [usersdatas,setUsersdatas]= useState([])
      setUsersdatas(list)
       }
     )
-    return()=>{
-      unsub()
-    }
+    // return()=>{
+    //   unsub()
+    // }
   },[usersdatas])
 
   // likes post

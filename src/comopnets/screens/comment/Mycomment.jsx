@@ -74,7 +74,7 @@ const showcomment = async () => {
         }
       };
       //the end
-      console.log(getcomment)
+     // console.log(getcomment)
   return (
   
    <View style={{ flex:1 }}>
@@ -100,19 +100,18 @@ const showcomment = async () => {
         </View>
      <View style={commentsyle.textview}>
      {getcomment.map((items) => (
-            <View>
-              <View >
-                <Image
+            <View style={commentsyle.commentinfoview}>
+              <View style={commentsyle.commentimhviews }>
+              {/* <Text >{items.name}</Text> */}
+                <Image style={commentsyle.userimgcomment }
                   source={{ uri: items?.profile }}
                 />
-                <Text >{items.name}</Text>
               </View>
               <View>
-                <Text >{items.comment}</Text>
+                <Text style={commentsyle.textstyle} >{items.comment}</Text>
               </View>
             </View>
           ))}
-      <Text>hi</Text>
      </View>
       
     </View>

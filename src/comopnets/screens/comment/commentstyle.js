@@ -50,6 +50,28 @@ const commentsyle= StyleSheet.create({
         color:"white",
         height:50,
         fontSize:16
+    },
+    commentinfoview:{
+        flexDirection:"row",
+        gap:10,
+        margin:8,
+        alignItems:"center"
+
+    },
+    commentimhviews:{
+        width:50,
+        height:50
+    },
+    userimgcomment:{
+       width:"100%",
+        height:"100%",
+        resizeMode: 'contain',
+        borderRadius: 150 / 2,
+        overflow: "hidden",
+        borderWidth: 3,
+    },
+    textstyle:{
+       paddingRight:30
     }
 })
 

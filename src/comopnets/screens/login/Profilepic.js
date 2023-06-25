@@ -18,8 +18,19 @@ const [anotherpic,setAnotherpic]=useState(null)
 const [success,setSuccess]= useState(null)
 const[imageur,setImageurl]=useState("")
 const name = route.params?.name
+// the end
+useLayoutEffect(()=>{
+  navigation.setOptions({
+      title:"profile",
+      headerStyle:{color:"black"}
+  })
+  },[navigation])
+  function changeimage(){
+      setAnotherpic(null)
+  }
 // update profile
 const updateprofle= async()=>{
+  
   try {
     if(myimage){
       const childPath = `profile/${
@@ -113,16 +124,7 @@ const updateprofle= async()=>{
 }
 
 //}
-// the end
-useLayoutEffect(()=>{
-navigation.setOptions({
-    title:"Set up profile picture",
-    headerStyle:{color:"black"}
-})
-},[navigation])
-function changeimage(){
-    setAnotherpic(null)
-}
+
   // from gallery
 function takeingallery(){
   ImagePicker.openPicker({
